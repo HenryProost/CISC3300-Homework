@@ -1,0 +1,15 @@
+1. HTML creates structure and gives users functionality to interact with 
+2. CSS controls the visual aspects of webpages and HTML
+3. Fordham's home webpage uses structure to convey meaning and navigation by
+   smartly having the most important tabs at the top of the webpage for ease
+   of navigation. And then the rest of the page is Fordham news and other 
+   articles which makes it easy to learn about the school for say 
+   prospective students or parents.
+4. HTML elements structure the content on a webpages
+   A tag are different elements and tells the browser how to interpret the content
+   Attributes go inside of the opening tag
+5. Selector and Declaration
+6. If there are two or more rules that apply to the same element then there is an order
+   of which they will take precedence
+7. <img src="../images/pinecone.jpg"
+8. A user fills in a form and then presses a button to submit the information
