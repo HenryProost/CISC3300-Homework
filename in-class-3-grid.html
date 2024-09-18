@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Grid</title>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="grid-item-1">Grid 1</div>
+            <div class="grid-item-2">Grid 2</div>
+        </div>
+
+        <style>
+            .grid-container
+            {
+                display: grid;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                height: 100px;
+            }
+
+            .grid-item-1
+            {
+                grid-row-start: 1;
+                grid-row-end: 2;
+                grid-column-start: 1;
+                grid-column-end: 6;
+
+                background-color: blue;
+                color: white;
+            }
+
+            .grid-item-2
+            {
+                grid-row-start: 2;
+                grid-row-end: 6;
+                grid-column-start: 4;
+                grid-column-end: 6;
+                background-color: green;
+            }
+        </style>
+
+    </body>
+</html>
