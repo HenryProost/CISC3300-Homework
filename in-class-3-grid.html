@@ -10,12 +10,15 @@
         </div>
 
         <style>
+            body, html{
+                height: 100%
+            }
             .grid-container
             {
                 display: grid;
                 grid-template-rows: 20% 20% 20% 20% 20%;
                 grid-template-columns: 20% 20% 20% 20% 20%;
-                height: 100px;
+                height: 100%;
             }
 
             .grid-item-1
@@ -31,7 +34,7 @@
 
             .grid-item-2
             {
-                grid-row-start: 2;
+                grid-row-start: 3;
                 grid-row-end: 6;
                 grid-column-start: 4;
                 grid-column-end: 6;
