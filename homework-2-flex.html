@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Flex Box HW</title>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="flex-child"></div>
+            <div class="flex-child"></div>
+            <div class="flex-child"></div>
+        </div>
+        <style>
+            .flex-container
+            {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+            }
+
+            .flex-child
+            {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                background-color: blue;
+                
+            }
+
+            @media screen and (min-width: 500px) {
+                .flex-container
+                {
+                    flex-direction: row;
+                }                
+            }
+
+            @media screen and (max-width: 499px) {
+                .flex-container
+                {
+                    flex-direction: column;
+                }
+                
+            }
+
+        </style>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+3. Flexbox and CSS Grids are both layout systems which makes formatting much easier.
+   They are different because Flexbox is only one dimensional and CSS Grids is 
+   two dimensional. Flexbox is easier to use, but Grids allows you to create a grid
+   which allows for more customization.
