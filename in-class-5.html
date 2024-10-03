@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>In class 5</title>
+        <script>
+            window.addEventListener('load', function(e)
+            {
+                const containerDiv = document.getElementById("container");
+
+                const textNode = document.createTextNode("In class 5");
+
+                containerDiv.appendChild(textNode);
+                containerDiv.classList.add("container-color");
+
+                const buttonElement = document.getElementById('event-button');
+                buttonElement.addEventListener('click', function()
+                {
+                    const appendDiv = document.createElement("div");
+                    const appendDivText = document.createTextNode("new text");
+
+                    appendDiv.appendChild(appendDivText);
+                    containerDiv.appendChild(appendDiv);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id="container">
+
+        </div>
+
+        <button id="event-button">Click me</button>
+
+        <style>
+            .container-color
+            {
+                color: blue;
+            }
+        </style>
+    </body>
+</html>

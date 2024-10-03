@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>In class 5 jQuery</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $('#container').text('In class 5').attr('class', 'container-color');
+
+                $('#event-button').on('click', function()
+                {
+                    $('#container').append("<div>new text</div>")
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div id="container">
+
+        </div>
+
+        <button id="event-button">Click me</button>
+
+        <style>
+            .container-color
+            {
+                color: blue;
+            }
+        </style>
+    </body>
+</html>

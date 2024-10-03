@@ -1,0 +1,29 @@
+1. What is javascript? How does an interpreted programming language differ from a
+compiled language?
+JavaScript is used to help develope webpages and allows for interactive and dynamic content on websites.
+An interpreted langauge differes from a compiled language because the code is executed line by line and does not 
+need to be compiled at run time such as C++.
+
+2. Contrast dynamically typed programming languages with statically typed ones. And
+contrast strongly typed programming languages with weakly typed ones. (google these)
+Dynamically typed programming languages dont need to define types when declaring variables
+vs a statically typed langauge that needs a type when declaring variables.
+Strongly typed languages cannot change variable types once it is assigned vs a weakly
+typed langauge in which a variable can be implicitly changed
+
+3. What is the difference between var, let, and const when declaring variables in JS?
+var isnt typically used anymore and can be redefined 
+let variables are variables that can be redefined and changed
+const variables are variables that once assigned a value cannot be changed 
+both let and const variables are block-scoped 
+
+4. What are anonymous functions? Higher order functions? Callback functions? First class
+functions?
+Anonymous functions are functions that are defined without a name
+Higher order functions are functions that can take other functions as arguments
+Callback functions are functions that are passed as an argument to another function
+FIrst-class functions are functions that can be assigned to variables, passed as arguments, 
+and returned from other functions
+
+5. Define objects in JavaScript.
+Objects are collections of key-value pairs that are typically strings
