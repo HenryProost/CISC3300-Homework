@@ -1,0 +1,20 @@
+{
+    "recipes": 
+    [
+        {
+            "id": 1,
+            "title": "PB&J",
+            "description": "A classic sandwhich with peanut butter and jelly"
+        },
+        {
+            "id": 2,
+            "title": "Chocolate Cake",
+            "description": "A cake that is chocolate"
+        },
+        {
+            "id": 3,
+            "title": "Instant Ramen",
+            "description": "A quick meal for busy people"
+        }
+    ]
+}
