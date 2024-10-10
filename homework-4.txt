@@ -1,0 +1,17 @@
+1. What is the DOM? What is meant by the DOM tree?
+    The DOM tells the browers how they should create a model of an HTML page and how
+    JS can access it/update it. It is called a DOM tree because when it is illustrated
+    it is done so by a tree with the document on top of the tree and then branches down
+    to different tags and their elements/attributes
+2. What is an XSS attack? How do they work? How can you guard against them?
+    An XSS attack is a cross-site scripting attack in which a user gains access to different
+    users accounts. To prevent this you should validate inputs, strip it of tags, escaping 
+    characters, etc.
+3. What is an event in JavaScript?
+    An event in JS are things that happen to HTML elements.
+4. How does a DOM eventListener work? What are the parameters it is expecting?
+    It works by listening for specific events and then triggers a callback function
+    when said event happens.
+5. What is jQuery? Why use it? How do we load jQuery onto a page?
+    JQuery is a JavaScript library that is used to simplify the use of JS on your website.
+    You can include JQ by including the src for JQ in script tags

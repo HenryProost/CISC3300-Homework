@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Homework 4</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <ul id="myList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <ul id="cats-list">
+        </ul>
+
+        <form id="myForm">
+            <label for="input">Enter text</label>
+            <input type="text" id="input" name="input">
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <div id="message"></div>
+
+        <script>
+            $('#myList li').click(function() {
+                $('#myList li').css('color', 'blue');
+            });
+
+            //List of cats :)
+            const cats = [
+                {
+                    name: 'Charlie',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Lily',
+                    adoptionStatus: 'not-available'
+                },
+                {
+                    name: 'Coco',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Oreo',
+                    adoptionStatus: 'not-available'
+                },
+                {
+                    name: 'Luna',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Milo',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Lola',
+                    adoptionStatus: 'not-available'
+                },
+                {
+                    name: 'Leo',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Willow',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Bella',
+                    adoptionStatus: 'not-available'
+                },
+                {
+                    name: 'Max',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Cleo',
+                    adoptionStatus: 'available'
+                },
+                {
+                    name: 'Lucy',
+                    adoptionStatus: 'not-available'
+                },
+                {
+                    name: 'Daisy',
+                    adoptionStatus: 'available'
+                },
+            ];
+            cats.forEach(cat => {
+                $('#cats-list').append(`<li>${cat.name}</li>`);
+            });
+
+            $('#myForm').submit(event => {
+                event.preventDefault();
+
+                const inputValue = $('#input').val();
+                console.log(inputValue);
+
+                $('#message').empty();
+                if(inputValue === '')
+                {
+                    $('#message').append('<div class="error">Please Provide a Value</div>');
+                } 
+                else 
+                {
+                    $('#message').append('<div class="success">Success</div>');
+                }
+            });
+        </script>
+
+        <style>
+            .error
+            {
+                color: white;
+                background-color: red;
+            }
+            .success
+            {
+                color: white;
+                background-color: green;
+            }
+        </style>
+    </body>
+</html>
