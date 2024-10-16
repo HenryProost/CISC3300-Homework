@@ -1,0 +1,110 @@
+<html>
+    <!-- API https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.0060&current_weather=true&temperature_unit=fahrenheit -->
+    <head>
+        <title>Homework 5</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>        
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="tempF">
+                <p><font color="black">NYC Weather</font></p>
+                <p id="temperature">Loading...</p>
+            </div>
+            <div class="recipes-container">
+                <h1>Recipes</h1>
+                <div id="recipes"></div>
+
+                <div id="add-recipe">
+                    <h3>Add a New Recipe</h3>
+                    <form id="recipe-form">
+                        <label for="title">Recipe Title:</label>
+                        <input type="text" id="title" name="title" required>
+                    
+                        <label for="description">Description:</label>
+                        <input type="text" id="description" name="description" required>
+                    
+                        <input type="submit" value="Add Recipe">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                // API URL with parameters for NYC (latitude: 40.7128, longitude: -74.0060)
+                const apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=40.7128&longitude=-74.0060&current_weather=true&temperature_unit=fahrenheit";
+
+                // Make an AJAX request to the Open-Meteo API
+                $.getJSON(apiUrl, function(data) {
+                    const temperature = data.current_weather.temperature;
+                    $('#temperature').text(`${temperature} °F`);
+                });
+
+                // Function to load recipes from the JSON server
+                function loadRecipes() {
+                    $.ajax({
+                        url: 'http://localhost:3000/recipes',
+                        method: 'GET',
+                        success: function(recipes) {
+                            $('#recipes').empty();
+                            recipes.forEach(function(recipe) {
+                                $('#recipes').append(
+                                    `<div class="recipe">
+                                        <h3>${recipe.title}</h3>
+                                        <p>Description: ${recipe.description}</p>
+                                    </div>`
+                                );
+                            });
+                        }
+                    });
+                }
+
+                loadRecipes();
+
+                // Handle form submission to add a new recipe
+                $('#recipe-form').submit(function (e) {
+                    e.preventDefault();
+
+                    const newRecipe = {
+                        title: $('#title').val(),
+                        description: $('#description').val()
+                    };
+
+                    $.ajax({
+                        url: 'http://localhost:3000/recipes',
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: JSON.stringify(newRecipe),
+                        success: function () {
+                            loadRecipes(); // Reload the recipes after adding
+                            $('#recipe-form')[0].reset(); // Clear the form
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <style>
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 650px;
+            }
+            .tempF {
+                width: 250px;
+                height: 250px;
+                text-align: center;
+                color: blue;
+                font-size: x-large;
+                background-color: greenyellow;
+            }
+            .recipes-container {
+                padding-left: 32px;
+            }
+            .recipe {
+                margin-bottom: 10px;
+            }
+        </style>
+    </body>
+</html>
