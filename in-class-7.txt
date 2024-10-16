@@ -1,0 +1,13 @@
+1. In order to route incoming requests that aren’t attempting to access specific files to our
+index.php page, we need to make use of the settings in the _____.htaccess____ file.
+2. All PHP files must start with a ___<?php___.
+3. Variables start with the ___$___ character in PHP.
+4. var_dump: dumps information about one or more variables. The information includes the
+type and value of the variable(s) - also can print out ___non primitive values____.
+5. ___Associate Arrays____ are key value pairs, behave like objects in JS.
+6. Variables will be evaluated in a string if it’s in ____double quotes____.
+7. The ____include____ statement takes all the text/code/markup that exists in the specified file
+and copies it into the file that uses it.
+8. When declaring a function we can specify what kind of ___data type___ each argument should
+be.
+
