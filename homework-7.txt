@@ -1,0 +1,15 @@
+1. What is a class? What is an object? What is OOP?
+    Classes are templates for creating objects. Objects are instances of classes. An OOP stands for
+    object oriented programming language and it allows for modularity in your code.
+2. Why use an abstract class in OOP?
+    Using an abstract OOP class in your code is usefull because it allows you to set a functions
+    that you want another class to inherit and that class must use all of the classes of the virtual function.
+    So it acts as a guideline/rules for the subclass.
+3. What are superglobals in PHP, what are some examples of data they provide?
+    Superglobals are built-in global arrays that provide access to specific data across all scopes.
+4. What are the two steps to setting up and using a class via namespaces?
+    You need to define the namespace in the class file and them import and use the namespace in other files.
+5. What is MVC? Detail the different parts.
+    MVC stands for model-view-controller. The model manages the data logic, the view is responsible for 
+    the presetation layer, and the controller acts as a middle man between the model and view layer handeling
+    user requests/inputs
