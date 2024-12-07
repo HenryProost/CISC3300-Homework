@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pole Vault Pro</title>
+    <link rel="stylesheet" type="text/css" href="view\styles\jump_list.css">
+    <link rel="stylesheet" type="text/css" href="view\styles\weather.css">
+</head>
+<body>
+    <main class="main">
+        <div id="weather-display"></div>
+        <section id="list" class="list">
+            <header class="list__row list__header">
+                <h1>Jumps</h1>
+                <div id="sessionSelect" class="list__header_select">
+                    <select id="sessionFilter" required>
+                        <option value="0">View All</option>
+                    </select>
+                    <button class="add-btn bold" onclick="filterJumps()">Go</button>
+                </div>
+            </header>
+            
+            <div id="jumpsList">
+                <!-- Jumps will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="add" class="add">
+            <h2>Add Jump</h2>
+            <form id="addJumpForm" class="add__form">
+                <div class="add__inputs">
+                    <label>Session:</label>
+                    <select id="jumpSession" required>
+                        <option value="">Please select</option>
+                    </select>
+                    <label>Height:</label>
+                    <input type="number" step="0.01" id="jumpHeight" placeholder="Height" required>
+                    <label>Attempts:</label>
+                    <input type="number" id="jumpAttempts" placeholder="Attempts" required>
+                </div>
+                <div class="add__addItem">
+                    <button type="submit" class="add-btn bold">Add</button>
+                </div>
+            </form>
+        </section>
+        
+        <br>
+        
+        <p><a href="index.php?action=list_sessions" class="nav-link">View/Edit Sessions</a></p>
+    </main>
+    <script src="view\js\jumps.js"></script>
+    <script src="view\js\weather.js"></script>
+</body>
+</html>

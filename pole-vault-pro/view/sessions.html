@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pole Vault Pro - Sessions</title>
+    <link rel="stylesheet" type="text/css" href="view\styles\sessions.css">
+    <link rel="stylesheet" type="text/css" href="view\styles\weather.css">
+</head>
+<body>
+    <main class="main">
+        <div id="weather-display"></div>
+        <section id="list" class="list">
+            <header class="list__row list__header">
+                <h1>Session List</h1>
+            </header>
+            
+            <div id="sessionsList">
+                <!-- Sessions will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="add" class="add">
+            <h2>Add Session</h2>
+            <form id="addSessionForm" class="add__form">
+                <div class="add__inputs">
+                    <label>Name:</label>
+                    <input type="text" id="sessionName" maxlength="50" placeholder="Session" required>
+                </div>
+                <div class="add__addItem">
+                    <button type="submit" class="add-btn bold">Add</button>
+                </div>
+            </form>
+        </section>
+        
+        <br>
+        <p><a href="index.php?action=list_jumps" class="nav-link">View & Add Jumps</a></p>
+    </main>
+    <script src="view\js\sessions.js"></script>
+    <script src="view\js\weather.js"></script>
+</body>
+</html>
